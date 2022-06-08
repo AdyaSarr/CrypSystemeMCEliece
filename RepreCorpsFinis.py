@@ -6,7 +6,7 @@ FqPoly = []
 FqBinai = []
 def corpsFinisPolynome(nombre, premier, puiss):
     print("F"+str(nombre)+"=F"+str(premier)+"[X]/<P(X)>")
-    print("P(X) =", params.converBinaiPoly("{0:b}".format(params.primitif[4])))
+    print(params.converBinaiPoly("{0:b}".format(params.primitif[4])))
     print("F"+str(nombre)+"={q(X) ∈ F"+str(premier)+" telle que dq<"+str(puiss)+"}")
     for i in range(nombre):
         Fq.append(i)
