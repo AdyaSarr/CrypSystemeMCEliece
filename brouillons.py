@@ -28,24 +28,6 @@ def DecompositionProduitFacteurPremier(nombre):
             d = d+1
         break
     return Puissances
-def converBinaiPoly(bits):
-    for i in range(len(bits)):
-        conca = ""
-        temp = (len(bits)-1)
-        
-        for j in bits:
-            if temp == 0:
-                if j == str(1):
-                    conca = conca + j
-            elif j=="1" and len(bits)>=2:
-                conca = conca + "X^" + str(temp) + "+"
-            temp = temp -1
-            if conca == "":
-                conca = str(0)
-        if conca[-1] == "+":
-            conca = conca[:-1]
-    return conca
-
 #Fonction qui permet de recuperer un polynome de 
 def polynome(r, p):
     print("Le degré du polynome est: ",r)
@@ -72,22 +54,3 @@ uni = len(numpy.unique(DecompositionProduitFacteurPremier(16)))
 print(uni)
 polynome(5, 2)
 print(DecompositionProduitFacteurPremier(16))
-##################################################################################"
-    for i in range(nombre):
-        conca = ""
-        tab = FqBinai[i]
-        temp = (len(tab)-1)
-        for j in tab:
-            if temp == 0:
-                if j == str(1):
-                    conca = conca + j
-            elif j=="1" and len(tab)>=2:
-                conca = conca + "X^" + str(temp) + "+"
-            temp = temp -1
-            if conca == "":
-                conca = str(0)
-        if conca[-1] == "+":
-            conca = conca[:-1]
-        FqPoly.append(conca)
-    print("==============================Representation Polynomiale===================================")
-    print('F'+str(nombre)+" = ",FqPoly)

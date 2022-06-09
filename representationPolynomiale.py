@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*- 
 import params
-
 Fq = []
 FqPoly = []
 FqBinai = []
 def corpsFinisPolynome(nombre, premier, puiss):
     print("F"+str(nombre)+"=F"+str(premier)+"[X]/<P(X)>")
-    print(params.converBinaiPoly("{0:b}".format(params.primitif[4])))
+    print("P(X) =", params.converBinaiPoly("{0:b}".format(params.primitif[4])))
     print("F"+str(nombre)+"={q(X) ∈ F"+str(premier)+" telle que dq<"+str(puiss)+"}")
     for i in range(nombre):
         Fq.append(i)
@@ -25,7 +24,7 @@ def corpsFinisPolynome(nombre, premier, puiss):
                 if j == str(1):
                     conca = conca + j
             elif j=="1" and len(tab)>=2:
-                conca = conca + "X^" + str(temp) + "+"
+                conca = conca + "X**" + str(temp) + "+"
             temp = temp -1
             if conca == "":
                 conca = str(0)
