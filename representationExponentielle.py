@@ -5,10 +5,15 @@ Created on Tue Jun  7 13:00:32 2022
 
 @author: root
 """
-Exp = [1]
-def exp_table(m, poly_primitif):
-    for i in range((1<<m)-2):
-        Exp.append(Exp[i]<<1)
-    return Exp
-print(exp_table(3, 11))
+import parametresFixes
 
+Exp = [0 for i in range((1<<parametresFixes.puissance))]
+def exp_table(m, poly_primitif):
+    Exp[0] = 1
+    Exp[(1<<parametresFixes.puissance)-1]=Exp[0]
+    for i in range(1, (1<<m)-1):
+        Exp[i]=Exp[i-1]<<1
+        if Exp[i]&(1<<m):
+            Exp[i]^=poly_primitif
+    return Exp
+print(exp_table(parametresFixes.puissance, parametresFixes.primitif[1]))
