@@ -11,12 +11,11 @@ import representationExponentielle
 AntiLog = representationExponentielle.Exp
 
 def anti_log_element(index, poly_primitif):
-    elemnt = 1<<index
-    print(elemnt)
+    elemnt = index%(parametresFixes.q - 1)
     j = 0
     for i in range(1, (1<<parametresFixes.puissance)-1):
-        if AntiLog[i] == elemnt:
+        if AntiLog[i] == (1<<elemnt)^parametresFixes.primitif[1]:
             j = i
             break
     return AntiLog[j]
-print(anti_log_element(6, parametresFixes.primitif[1]))
+print(anti_log_element(7, parametresFixes.primitif[1]))

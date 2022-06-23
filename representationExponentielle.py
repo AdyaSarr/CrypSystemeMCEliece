@@ -6,8 +6,9 @@ Created on Tue Jun  7 13:00:32 2022
 @author: root
 """
 import parametresFixes
-
+#table regroupant la representation exponentielle de chaque element de Fq
 Exp = [0 for i in range((1<<parametresFixes.puissance))]
+#la fonction exp_table retourne cette table
 def exp_table(m, poly_primitif):
     Exp[0] = 1
     Exp[(1<<parametresFixes.puissance)-1]=Exp[0]

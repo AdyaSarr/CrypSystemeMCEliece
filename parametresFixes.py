@@ -6,7 +6,7 @@ Created on Wed Mar 30 13:06:58 2022
 @author: root
 """
 import numpy as np
-q = 16 #nombre d'element du corps F16
+q = 8 #nombre d'element du corps F16
 p = 2 #nombre d'element de F2
 puissance = 3 #la puissance de p
 primitif = [7, 11, 13, 19, 21, 25] #tableau de polynome
