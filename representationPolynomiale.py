@@ -25,7 +25,7 @@ def corpsFinisPolynome(nombre, premier, puiss):
         FqBinai.append("{0:b}".format(Fq[i]))
         FqPoly.append(parametresFixes.converBinaiPoly(FqBinai[i]))
     return FqPoly
-print(corpsFinisPolynome(parametresFixes.q, parametresFixes.p, parametresFixes.puissance)[15])
+print(corpsFinisPolynome(parametresFixes.q, parametresFixes.p, parametresFixes.puissance)[7])
 
 
 

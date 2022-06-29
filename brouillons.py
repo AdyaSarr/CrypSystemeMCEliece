@@ -49,6 +49,23 @@ def corpsFinis(nombre):
             print(DecompositionProduitFacteurPremier(nombre).count(2))
         else:
             print("La decomposition")
+def log_element(x):
+    j = 1
+    for i in range(1, gf_ord):
+        if Exp[i] == x%gf_card:
+            j = i
+            break
+    return Log[Exp[j]]
+
+
+def anti_log_element(index, poly_primitif):
+    elemnt = index%gf_ord
+    j = 0
+    for i in range(len(Log)):
+        if elemnt == Log[i]:
+            j = i
+            break
+    return j
 corpsFinis(16)
 uni = len(numpy.unique(DecompositionProduitFacteurPremier(16)))
 print(uni)
