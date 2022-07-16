@@ -1,4 +1,7 @@
 import numpy.polynomial as ml
+
+
+
 def get_poly(indice):
     n = bin(indice)[2:]
     L = [0 for i in range(len(n))]
@@ -7,4 +10,13 @@ def get_poly(indice):
     print(L)
     L.reverse()
     return ml.Polynomial(L)
-print(get_poly(842))
+def conversionBinaire(x):
+    chainBinaire = ""
+    i = 0
+    while x!=0:
+        i = i+1
+        bitt = (27>>i)&1
+        chainBinaire +=str(bitt)
+        x = x>>i
+    return chainBinaire
+print(conversionBinaire(27))

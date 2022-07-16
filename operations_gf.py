@@ -27,16 +27,21 @@ def gf_pow(x, p):
 
 #la racine carré d'un element de Fq
 def gf_sqrt(x):
-    return int((gf.Log[x]*1/2)%gf.gf_ord)
+    return gf.Exp[(gf.Log[x]<<gf.m-1)%gf.gf_ord]
 
 #la division de deux elements de Fq
 def gf_div(x, y):
     return gf_multi(x, gf_inv(y))
 
-
-print(gf_multi(6, 7))
-print(gf_add(6, 7))
-print(gf_inv(7))
-print(gf_pow(5, 4))
-print(gf_sqrt(5))
-print(gf_div(6, 7))
+print("La multiplication des elements sont:")
+print(gf_multi(4271, 7730))
+print("L'addition des elements sont:")
+print(gf_add(4271, 7730))
+print("L'inverse d'un element est :")
+print(gf_inv(4271))
+print("La puissant de l'elements est:")
+print(gf_pow(6347, 2))
+print("La racine carrée est :")
+print(gf_sqrt(7730))
+print("La division des elements est:")
+print(gf_div(7730, 4271))
