@@ -1,15 +1,15 @@
 
-ETAPE 1: Optimiser les codes sur la representation polynomiale des elements de Fq.
-ETAPE 2: Faire la representation exponentielle(En optimisant le code)
-ETAPE 3: Connaitre si Oui ou Non on doit effectuer une reduction sur element quelconque
-ETAPE 4: Si Oui trouver pour cet element f son representant r dans Fq
+ETAPE 1: Optimiser les codes sur la representation polynomiale des elements de Fq.done
+ETAPE 2: Faire la representation exponentielle(En optimisant le code).done
+ETAPE 3: Connaitre si Oui ou Non on doit effectuer une reduction sur element quelconque.done
+ETAPE 4: Si Oui trouver pour cet element f son representant r dans Fq.done
 ETAPE 5: Faire la table log: cette table va nous permettre de donner pour un element quelconque f il nous renvoie un i tel que f = (alpha)^i avec alpha la
-         solution du polynome primitif
-ETAPE 6: Faire la table antiLog: cette table va nous permettre pour un exposant i donner un element f de Fq tel que f = (alpha)^i
+         solution du polynome primitif.done
+ETAPE 6: Faire la table antiLog: cette table va nous permettre pour un exposant i donner un element f de Fq tel que f = (alpha)^i.done
 ETAPE 7: OPERATION SUR Fq
-            a. Addition modulo poly_primitif dans Fq
-              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = f1 + f2
-            b. Multiplication modulo poly_primitif dans Fq
-              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = f1 * f2
-            c. PGCD dans Fq
-              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = PGCD(f1, f2)
+            a. Addition modulo poly_primitif dans Fq.done
+              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = f1 + f2.done
+            b. Multiplication modulo poly_primitif dans Fq.done
+              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = f1 * f2.done
+            c. PGCD dans Fq.done
+              pour tout f1 et f2 de Fq trouver f3 de Fq telque f3 = PGCD(f1, f2).done
