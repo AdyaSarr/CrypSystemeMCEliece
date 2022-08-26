@@ -16,7 +16,13 @@ class matrix:
                 ligne.append(0)
             mat.append(ligne)
         self.matrix = mat
-        
+    def load(self,tableau): #permet de convertir un 2d-array en matrice
+        if len(tableau) != self.nbr_row or len(tableau[0]) != self.nbr_col:
+            return ("error : Bad dimensions")
+        for i in range(self.nbr_row):
+            for j in range(self.nbr_col):
+                self.matrix[i][j]=tableau[i][j]
+                
     def __getitem__(self,index):
         return self.matrix[index]
  
@@ -41,7 +47,6 @@ class matrix:
                 if x==int(x):
                     x=int(x)
                 self[i][j]=x
-                print(self[i][j])
         print("\n")
 
     def identity(self):  #charge l'identité dans la matrice si elle est carrée
@@ -75,7 +80,7 @@ class matrix:
         return matreturn
     
     def transpose(self): #renvoie la matrice transposée
-        matreturn = matrix(self.nbr_row,self.nbr_col)
+        matreturn = matrix(self.nbr_col,self.nbr_row)
         for i in range(self.nbr_col):
             for j in range(self.nbr_row):
                 matreturn[i][j]=self[j][i]
@@ -207,5 +212,7 @@ class matrix:
                 if pivot[0] == 0:
                     matreturn = matreturn.permutation_lignes(i, i+1)
                     pivot = matreturn.lign(i)
-                pivot2[j] = int((int(pivot[j])+int(matreturn[i+1][j]))%2)
+                pivot2[0][j] = int((int(pivot[0][j])+int(matreturn[i+1][j]))%2)
+        for i in range(self.nbr_row):
+            matreturn.append(pivot2)
         return matreturn
